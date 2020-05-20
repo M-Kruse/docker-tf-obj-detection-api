@@ -2,7 +2,7 @@
 
 Dockerfile to build a TensorFlow container with the TF Object Detection API support and models baked in.
 
-Beware this is over 4G in size.
+Beware the built image is over 4G in size.
 
 # Build
 
