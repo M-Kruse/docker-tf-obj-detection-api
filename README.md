@@ -9,9 +9,11 @@ Beware this is over 4G in size.
 `git clone https://github.com/M-Kruse/docker-tf-obj-detection-api/`  
 `cd docker-tf-obj-detection-api`  
 `docker build -t tf-obj-detection-api .`  
-`docker run -v $PWD:/tmp -w /tmp -u tf-user:docker -it --rm 231411af1173 python object_detection/builders/model_builder_tf1_test.py`  
 
 # Test
+
+`docker run -v $PWD:/tmp -w /tmp -u tf-user:docker -it --rm tf-obj-detection-api python object_detection/builders/model_builder_tf1_test.py`  
+
 
 ```
 Scooty@ScootysUbuntu:~/Code/models/research$ docker run -v $PWD:/tmp -w /tmp -u tf-user:docker -it --rm tf-obj-detection-api python object_detection/builders/model_builder_tf1_test.py
