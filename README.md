@@ -1,6 +1,8 @@
 # docker-tf-obj-detection-api
 
-Dockerfile to build a TensorFlow container with the TF Object Detection API support baked in
+Dockerfile to build a TensorFlow container with the TF Object Detection API support and models baked in.
+
+Beware this is over 4G in size.
 
 # Build
 
