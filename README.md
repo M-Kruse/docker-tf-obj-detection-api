@@ -1,16 +1,22 @@
-#Dockerfile to build a TensorFlow container with the TF Object Detection API support baked in
+# docker-tf-obj-detection-api
 
-#Build
+Dockerfile to build a TensorFlow container with the TF Object Detection API support and models baked in.
 
-`git clone https://github.com/M-Kruse/docker-tf-obj-detection-api/`
-`cd docker-tf-obj-detection-api`
-`docker build -t tf-obj-detection-api .`
-`docker run -v $PWD:/tmp -w /tmp -u tf-user:docker -it --rm 231411af1173 python object_detection/builders/model_builder_tf1_test.py`
+Beware the built image is over 4G in size.
 
+# Build
+
+`git clone https://github.com/M-Kruse/docker-tf-obj-detection-api/`  
+`cd docker-tf-obj-detection-api`  
+`docker build -t tf-obj-detection-api .`  
+
+# Test
+
+`docker run -v $PWD:/tmp -w /tmp -u tf-user:docker -it --rm tf-obj-detection-api python object_detection/builders/model_builder_tf1_test.py`  
 
 
 ```
-cooty@ScootysUbuntu:~/Code/models/research$ docker run -v $PWD:/tmp -w /tmp -u tf-user:docker -it --rm tf-obj-detection-api python object_detection/builders/model_builder_tf1_test.py
+Scooty@ScootysUbuntu:~/Code/models/research$ docker run -v $PWD:/tmp -w /tmp -u tf-user:docker -it --rm tf-obj-detection-api python object_detection/builders/model_builder_tf1_test.py
 Running tests under Python 3.6.8: /usr/local/bin/python
 [ RUN      ] ModelBuilderTF1Test.test_create_experimental_model
 [       OK ] ModelBuilderTF1Test.test_create_experimental_model
