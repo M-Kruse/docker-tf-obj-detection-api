@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:1.15.0-gpu-py3
+FROM tensorflow/tensorflow:latest-gpu
 
 WORKDIR /usr/src/app
 RUN apt-get update -y && apt-get install -y \
